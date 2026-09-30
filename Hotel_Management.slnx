@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Hotel.BussinessLogic/Hotel.BussinessLogic.csproj" />
+  <Project Path="Hotel.DataAccess/Hotel.DataAccess.csproj" />
+  <Project Path="Hotel_Management/Hotel_Management.csproj" />
+</Solution>
