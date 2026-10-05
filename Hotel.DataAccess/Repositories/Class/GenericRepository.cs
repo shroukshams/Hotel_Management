@@ -1,4 +1,7 @@
-﻿using Hotel.DataAccess.Repositories.InterFaces;
+﻿using Hotel.DataAccess.Context;
+using Hotel.DataAccess.Models;
+using Hotel.DataAccess.Repositories.InterFaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -8,13 +11,13 @@ using static Hotel.DataAccess.Repositories.InterFaces.IGenericRepository;
 namespace Hotel.DataAccess.Repositories.Class
 {
     
-        public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity, new()
+        public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity<int>, new()
         {
             // DB connection
-            private readonly GymDbContext dbContext;
+            private readonly HotelDbContext dbContext;
             private readonly DbSet<TEntity> _set;
 
-            public GenericRepository(GymDbContext context)
+            public GenericRepository(HotelDbContext  context)
             {
                 dbContext = context;
                 // Register Services in Program.cs

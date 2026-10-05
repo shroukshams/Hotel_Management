@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Hotel.DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
 namespace Hotel.DataAccess.Repositories.InterFaces
-{
-    public interface IGenericRepository
-    {
-        public interface IGenericRepository<TEntity> where TEntity : BaseEntity, new()
+{  public interface IGenericRepository<TEntity> where TEntity : BaseEntity<int>, new()
         {
             // Get By Id
             Task<TEntity?> GetByIdAsync(int id, CancellationToken ct = default);
@@ -31,4 +29,4 @@ namespace Hotel.DataAccess.Repositories.InterFaces
 
         }
     }
-}
+

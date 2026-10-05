@@ -4,11 +4,10 @@ using System.Text;
 
 namespace Hotel.DataAccess.Models
 {
-    public class RoomType
+    public class RoomType : BaseEntity<string>
     {
         public int Name { get; set; }
         public int RoomId { get; set; }
-        public string RoomTypeId { get; set; }
         public string RoomNumber { get; set; }
         public string ImageUrl { get; set; }
         public int Capacity { get; set; }

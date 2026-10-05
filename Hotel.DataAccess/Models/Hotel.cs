@@ -5,9 +5,8 @@ using System.Text;
 
 namespace Hotel.DataAccess.Models
 {
-    public class Hotel
+    public class Hotel : BaseEntity<int>
     {
-        public int HotelId { get; set; }
     
         public string Name { get; set; }
         public string Address { get; set; }
